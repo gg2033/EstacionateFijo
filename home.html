@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>trabajando con javascript</title>
+        <!-- Jquery -->
+        <script src="jquery-3.1.1.min.js"></script>
+         <!-- javascript-->
+        <script src="javascript/home.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" href="home.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        
+
+          <!-- include jQuery -->
+          <script src="jquery-3.1.1.min.js"></script>
+          <!-- include leaflet -->
+          <link rel="stylesheet" href="./leaflet/leaflet.css" />
+          <script src="./leaflet/leaflet.js"></script>
+  
+          <!-- include client -->
+          <link rel="stylesheet" type="text/css" media="screen" href="client.css" />
+          <script src="config.js"></script>
+          <script src="mapCreation.js"></script>
+          <script src="drawer.js"></script>
+          <script src="client_v1.js"></script>
+   
+    </head>
+    <body>
+
+        <div id="container">
+        <div id="header"><h1 id="title">Estacionate Fijo</h1><p>Bienvenido <span id="username"></span></p>  <button id="salir"> Salir </button></div>
+
+        <div id="login">
+
+            <div id="miFormulario">
+                <h3>Acciones</h3>
+                <input type="button" id="nombre" value="Ver puntos de venta">
+                <input type="button" id="pass" value="Ver infracciones">
+                <input type="button" id="pass" value="Ver estacionamientos">
+            </div>
+        </div>
+    
+        <div styles="display:block"id="mapid"></div>
+       
+    </div>
+    </body>
+</html>

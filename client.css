@@ -1,0 +1,21 @@
+body {
+  font-family: Arial;
+}
+
+#right {
+  position: absolute;
+
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  width: 25%;
+}
+
+#states {
+  margin: 7px 15px;
+}
+
+ul {
+  
+}

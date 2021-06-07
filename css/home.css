@@ -1,0 +1,110 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0 !important;
+    height: 100vh !important;
+    overflow: auto;
+}
+
+#noLogueado {
+    background: red;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100px;
+}
+
+form input {
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+}
+
+
+#container{
+    background-color: #797777;
+    min-height: 100vh !important;
+    height: auto;
+    position: relative;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.homeContainer {
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+}
+
+
+
+#header{
+    padding: 15px;
+    margin: 20px;
+}
+
+#header nav {
+   margin-top: 10px;
+}
+
+#title{
+    text-align: center;
+    color:rgba(228, 228, 228, 0.411);
+}
+
+#actionsContainer {
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+#actionsContainer H4 {
+    color: white;
+    margin: 15px 20px 15px 5px;
+}
+
+#actionsContainer .opcion {
+    margin-top: 9px;
+    padding: 5px;
+    padding-left: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.171);
+    border-radius: 5px;
+    background-color: rgba(226, 223, 223, 0.301);
+    color: #f8f8f8;
+    max-width: 400px;
+}
+#pass{
+    display: flex;
+    width: 90%;
+
+}
+#nombre{
+    display: flex;
+    width: 90%;
+}
+#botonsubmit{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+#mapid{
+    width: 100%;
+    height: 600px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

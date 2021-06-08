@@ -8,6 +8,7 @@ body {
     margin: 0 !important;
     height: 100vh !important;
     overflow: auto;
+    background-color: rgb(23, 139, 172) !important;  
 }
 
 #noLogueado {
@@ -24,12 +25,11 @@ form input {
 
 
 #container{
-    background-color: #797777;
     min-height: 100vh !important;
     height: auto;
     position: relative;
     overflow: auto;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .homeContainer {
@@ -41,17 +41,24 @@ form input {
 
 
 #header{
-    padding: 15px;
-    margin: 20px;
+    padding: 0px;
+    height: 150px;
+    margin-top: 30px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
 }
 
 #header nav {
-   margin-top: 10px;
+   margin: 0px;
+   padding: 10px;
+   text-align: end;
 }
 
 #title{
     text-align: center;
-    color:rgba(228, 228, 228, 0.411);
+    color:rgba(243, 243, 243, 0.445);
 }
 
 #actionsContainer {
@@ -65,20 +72,27 @@ form input {
 }
 
 #actionsContainer .opcion {
-    margin-top: 9px;
+    margin-top: 10px;
     padding: 5px;
-    padding-left: 10px;
+    text-align: center;
     border: 1px solid rgba(204, 204, 204, 0.171);
     border-radius: 5px;
     background-color: rgba(226, 223, 223, 0.301);
     color: #f8f8f8;
     max-width: 400px;
+    margin-right : 10px;
+    width: 160px !important;
 }
 #pass{
     display: flex;
     width: 90%;
-
 }
+
+#actionsContainer .opcion:hover {
+    background-color: rgba(226, 223, 223, 0.61);
+    transition-duration: 0.3s;
+}
+
 #nombre{
     display: flex;
     width: 90%;
@@ -92,6 +106,17 @@ form input {
     width: 100%;
     height: 600px;
     border-radius: 5px;
+}
+
+
+#usuario {
+    font-size: 18px;
+    color: rgb(242, 243, 242);
+    padding: 8px;
+    border-radius: 50%;
+    font-family: 'Pacifico', cursive !important;
+    letter-spacing: 2px;
+    margin-right: 10px;
 }
 
 

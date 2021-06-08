@@ -3,15 +3,14 @@ const home =`
     <div id="header">
        <h1 id="title">Estacionate Fijo</h1>
        <nav>
-            <button class="btn btn-outline-primary">Registrar Conductor</button>
-            <button class="btn btn-outline-primary px-3 mx-3" onclick="renderLogin()">Logear Conductor</button>
+            <button class="btn btn-outline-light px-3 mx-3 shadow" id="btnLogin" onclick="renderLogin()">Logear Conductor</button>
+            <span id="usuario" class="d-none"></span>
        </nav>
     </div>
     <div id="actionsContainer">
-        <h4>ACCIONES</h4>
-        <input class="opcion" type="button" id="pass" value="Ver infracciones"/>
-        <input class="opcion" type="button" id="nombre" value="Ver puntos de venta"/>
-        <input class="opcion" type="button" id="pass" value="Ver estacionamientos"/>
+        <input class="opcion d-none" id="infraciones" type="button" value="Ver infracciones"/>
+        <input class="opcion" type="button" value="Ver puntos de venta"/>
+        <input class="opcion" type="button" value="Ver estacionamientos"/>
     </div>
-    <div id="mapid"></div>
+   <div id="mapid"></div>
 </div>`

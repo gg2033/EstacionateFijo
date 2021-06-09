@@ -12,5 +12,6 @@ const home =`
         <input class="opcion" type="button" value="Ver puntos de venta"/>
         <input class="opcion" type="button" value="Ver estacionamientos"/>
     </div>
-   <div id="mapid"></div>
+    <div class="containerInfracciones d-none" id="containerInfracciones"></div>
+    <div id="mapid"></div>
 </div>`

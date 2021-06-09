@@ -111,7 +111,7 @@ form input {
 
 #usuario {
     font-size: 18px;
-    color: rgb(242, 243, 242);
+    color: rgba(253, 253, 253, 0.781);
     padding: 8px;
     border-radius: 50%;
     font-family: 'Pacifico', cursive !important;

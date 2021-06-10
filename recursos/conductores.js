@@ -3,7 +3,7 @@ const conductores = [
         nombre : "Ted Mosvi",
         email : "ted@gmail.com",
         pass : "tedmosvi",
-        patente : "AABC1234"
+        patente : "ABC123"
     },
     {
         nombre : "Barny Stinzon",

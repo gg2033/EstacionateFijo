@@ -8,9 +8,9 @@ const home =`
        </nav>
     </div>
     <div id="actionsContainer">
-        <input class="opcion d-none" id="infraciones" type="button" value="Ver infracciones"/>
-        <input class="opcion" type="button" value="Ver puntos de venta"/>
-        <input class="opcion" type="button" value="Ver estacionamientos"/>
+        <span class="opcion px-3" id="infraciones" onclick="renderFormInfrs();">Ver Infracciones</span>
+        <span class="opcion">Ver Puntos de venta</span>
+        <span class="opcion">Ver Estacionamientos</span>
     </div>
     <div class="containerInfracciones d-none" id="containerInfracciones"></div>
     <div id="mapid"></div>

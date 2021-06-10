@@ -1,3 +1,22 @@
+/*formulario para infracciones*/
+.containerFormInfrs {
+    height: 100vh !important;
+    width: 100% !important;
+   
+}
+
+.containerFormInfrs .formInfrs {
+    height: 400px !important;
+    min-width: 250px;
+    max-width: 630px;
+    width: 80vw !important;
+    box-shadow: rgba(20, 20, 20, 0.466) -5px 20px 20px;
+
+}
+
+
+
+/*mostramos las infracciones*/
 .containerInfracciones {
     background-color: #eeeeee !important;
     padding: 20px;
@@ -31,7 +50,17 @@
 }
 
 
+#patenteSelecionada {
+    background-color: rgb(241, 241, 241);
+    color: rgb(49, 49, 49);
+    padding: 0 10PX;
+    margin-bottom: 30px !important;
+}
 
+#patenteSelecionada::placeholder {
+    font-weight: 100;
+    color: rgb(134, 134, 134);
+}
 
 
 

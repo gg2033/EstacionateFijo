@@ -18,7 +18,7 @@ const loginForm = `
                     <input type="password" id="passLog" class="form-control" i>
                 </div>
                 <div class="text-center pb-4 pt-2">
-                    <button type="submit" id="btnlogin" class="btn btn-primary" onclick="handlerLogin()">LOGIN</button>
+                    <button type="button" id="btnlogin" class="btn btn-primary" onclick="handlerLogin()">LOGIN</button>
                 </div>
                 <div class="col-lg-12 loginbttm">
                     <div class="col-lg-6 login-btm login-text">

@@ -11,19 +11,12 @@ function createMap(nodeId) {
     const tileprovider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     L.tileLayer(tileprovider,
         {
-            maxZoom: 18,
+            maxZoom: 25,
         }).addTo(myMap);
 
-    L.polygon(
-        [
-            L.latLng(-34.515594, - 58.705654),
-            L.latLng(-34.523503, -58.714062),
-            L.latLng(-34.519177, -58.719890),
-            L.latLng(-34.511089, -58.707909),
-            L.latLng(-34.514062, -58.707909),
-            L.latLng(-34.513824, -58.707584)
-        ]
-    ).addTo(myMap);
-
-    let marker = L.marker(ungsLocation).addTo(myMap); 
+    Zonas.forEach(zona => {
+        L.polygon(zona.region, {color:zona.color}
+        ).addTo(myMap);
+    })
+    
 }

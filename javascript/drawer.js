@@ -36,7 +36,7 @@ var Drawer = function() {
             shadowAnchor: [4, 62],  // the same for the shadow
             popupAnchor:  [-3, -30] // point from which the popup should open relative to the iconAnchor
         });
-		var info = comercio.nombre + " - " + "<br>Horarios de Atención: "+comercio.horariosDeAtencion +"<br>Rubro: "+comercio.rubro.nombre+"<br>Dato interesante: "+comercio.rubro.descripcion;
+		var info = comercio.nombre + "<br>Dirección: "+comercio.direccion + "<br>Horarios de Atención: "+comercio.horariosDeAtencion +"<br>Rubro: "+comercio.rubro.nombre+"<br>Dato interesante: "+comercio.rubro.descripcion;
 
 		// Creamos un marker.		
 		var p = L.marker(L.latLng(comercio.ubicacion.lat, comercio.ubicacion.lon),{icon: iconComercio})

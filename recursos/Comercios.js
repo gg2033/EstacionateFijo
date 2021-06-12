@@ -3,7 +3,7 @@ const Comercios = [
         nombre : "Bar de moe's",
         direccion : "calle hernandez 1234",
         ubicacion : {lat: -34.528860, lon:-58.708769}, 
-        rubro : {nombre:"Bebidas alcohólicas", codigo:'BEB', descripcion:"Moe vende bebidas para homero y barney"},
+        rubro : {nombre:"Bebidas alcohólicas", codigo:'BEB', descripcion:"Barney es cliente frecuente del bar"},
         horariosDeAtencion: 'Lunes a domingos de 8:00am a 24:00hs',
         icon : 'img/icon_bar_moe.png'
     },

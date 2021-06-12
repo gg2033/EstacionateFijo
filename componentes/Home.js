@@ -9,7 +9,7 @@ const home =`
     </div>
     <div id="actionsContainer">
         <span class="opcion px-3" id="infraciones" onclick="renderFormInfrs();">Ver Infracciones</span>
-        <span class="opcion">Ver Puntos de venta</span>
+        <span class="opcion" id="comercios" onclick="renderComercios();">Ver Puntos de venta</span>
         <span class="opcion">Ver Estacionamientos</span>
     </div>
     <div class="containerInfracciones d-none" id="containerInfracciones"></div>

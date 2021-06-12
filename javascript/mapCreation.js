@@ -2,10 +2,10 @@
  * Función para crear un mapa.
  */
 
-
+var myMap;
 function createMap(nodeId) {
     var ungsLocation = [-34.5221554, -58.7000067];
-    let myMap = L.map(nodeId).setView(ungsLocation, 13);
+    myMap = L.map(nodeId).setView(ungsLocation, 13);
 
     // renderizamos el mapa
     const tileprovider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'

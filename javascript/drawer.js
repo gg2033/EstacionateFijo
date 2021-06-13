@@ -5,18 +5,26 @@ var Drawer = function() {
     }
 
     function draweEstacionamientoInMap(estacionamiento, map){
-        console.log("Dibujando estacionamiento");
-
-        var iconEstacionamiento = L.icon({
-            iconUrl: estacionamiento.icon,
-        });
-		var info = "Codigo Estacionamiento: "+estacionamiento.codigo + " - " + "Estado: "+estacionamiento.estado;
-
-
-        var p = L.marker(L.latLng(estacionamiento.ubicacion))
-        .bindPopup(info);
-        p.addTo(map);	
-        $(p._icon).addClass('estacionamientosIcon');
+        if($('.estacionamientosIcon').length<1){
+            console.log("Dibujando estacionamiento");
+            var customMarker =  L.AwesomeMarkers.icon({
+                markerColor: 'green'
+                });
+            var iconEstacionamiento = L.icon({
+                iconUrl: estacionamiento.icon,
+            });
+            var info = "Codigo Estacionamiento: "+estacionamiento.codigo + " - " + "Estado: "+estacionamiento.estado;
+    
+    
+            var p = L.marker(L.latLng(estacionamiento.ubicacion),{icon:customMarker})
+            .bindPopup(info);
+    
+            p.addTo(map);	
+            $(p._icon).addClass('estacionamientosIcon');
+        }else{
+            console.log("ya estan dibujadas");
+        }
+      
     
             
      }
@@ -25,16 +33,13 @@ var Drawer = function() {
      * Función para dibujar una ubicacion en un mapa.
      */
     function drawLocationInMap(Comercios, map) {
-        console.log("Dibujando la ubicacion del comercio.");
-      
 
-		// Creamos un marker.		
+       
+                		// Creamos un marker.		
 	/* 	var p = L.marker(L.latLng(comercio.ubicacion.lat, comercio.ubicacion.lon),{icon: iconComercio})
 			.bindPopup(info);
 
 		p.addTo(map);	 */
-      
-
             //cluster marker
             var markers = L.markerClusterGroup();
             var arrayMarcadoresComercios=[];
@@ -50,12 +55,18 @@ var Drawer = function() {
                 var info = comercio.nombre + "<br>Dirección: "+comercio.direccion + "<br>Horarios de Atención: "+comercio.horariosDeAtencion +"<br>Rubro: "+comercio.rubro.nombre+"<br>Dato interesante: "+comercio.rubro.descripcion;
 
                 var marker = L.marker(L.latLng(comercio.ubicacion.lat, comercio.ubicacion.lon)).bindPopup(info);
+               
                 markers.addLayer(marker)
+              
             });
            
           /*   markers.addLayer(marker); */
             map.addLayer(markers);
-         /*    $(p._icon).addClass('comerciosIcon'); */
+        
+        
+       
+      
+
      
 	}
 }

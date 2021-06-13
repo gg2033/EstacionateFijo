@@ -36,10 +36,20 @@ function createMap(nodeId) {
         console.log(myMap.getZoom());
         if (myMap.getZoom() <17){
             $('#mapid .comerciosIcon').css({'display':'none'}); 
+            
+            
         }
         if (myMap.getZoom()>17){
             $('#mapid .comerciosIcon').css({'display':'block'}); 
         }
+
+        if (myMap.getZoom() <14){
+            $('#mapid .estacionamientosIcon').css({'display':'none'}); 
+        }
+        if (myMap.getZoom()>14){
+            $('#mapid .estacionamientosIcon').css({'display':'block'}); 
+        }
+        
       /*   var newzoom = '' + (myMap.getZoom()*2) +'px'; */
     
         

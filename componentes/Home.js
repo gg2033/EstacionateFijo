@@ -8,9 +8,10 @@ const home =`
        </nav>
     </div>
     <div id="actionsContainer">
-        <span class="opcion px-3" id="infraciones" onclick="renderFormInfrs();">Ver Infracciones</span>
-        <span class="opcion" id="comercios" onclick="renderComercios();">Ver Puntos de venta</span>
-        <span class="opcion" onclick="renderEstacionamientos();">Ver Estacionamientos</span>
+        <span class="opcion px-3" id="infraciones" onclick="renderFormInfrs();">Infracciones</span>
+        <span class="opcion" id="comercios" onclick="renderComercios();">Puntos de venta</span>
+        <span class="opcion" onclick="renderEstacionamientos();">Estacionamientos</span>
+        <span class="opcion d-none" id="ubicarAuto">Ubicar mi auto</span>
     </div>
     <div class="containerInfracciones d-none" id="containerInfracciones"></div>
     <div id="mapid"></div>

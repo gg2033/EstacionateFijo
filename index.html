@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>trabajando con javascript</title>
+        <title>Estacionamientos SW</title>
         <!-- css -->
         <link rel="stylesheet" href="css/client.css">
         <link rel="stylesheet" href="css/loginForm.css">
@@ -33,6 +33,8 @@
 
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    
     </head>
     <body >
         <div class="container" id="container">
@@ -40,13 +42,15 @@
         </div>
         
         <!-- componentes -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+        
         <script src="componentes/loginForm.js"></script>
         <script src="componentes/Home.js"></script>
+        <script src="componentes/infraccionesForm.js"></script>
         <script src="recursos/conductores.js"></script>
         <script src="recursos/Comercios.js"></script>
         <script src="recursos/Estacionamientos.js"></script>
         <script src="recursos/Zonas.js"></script>
+       
         <!-- logica -->
         <script src="javascript/drawer.js"></script>
         <script src="javascript/mapCreation.js"></script>

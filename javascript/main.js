@@ -16,9 +16,9 @@ function renderHome() {
 
 
 renderHome();
+//renderFormInfrs();
 
-
-
+//renderInfracciones("ABC123")
 
 
 

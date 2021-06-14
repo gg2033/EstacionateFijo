@@ -6,16 +6,18 @@ const conductores = [
         patente : "ABC123"
     },
     {
-        nombre : "Barny Stinzon",
-        email : "barny@gmail.com",
-        pass : "barnystinzon",
-        patente : "AAA000"
+        nombre : "Barnie Stinzon",
+        email : "barnie@gmail.com",
+        pass : "barniestinzon",
+        patente : "AAA000",
+        ubicacionAuto : [-34.519100, -58.713994]
     },
     {
         nombre : "Lily",
         email : "lily@gmail.com",
         pass : "lily1234",
-        patente : "BBB111"
+        patente : "BBB111",
+        ubicacionAuto : [-34.519100, -58.713994]
     }
 ]
 

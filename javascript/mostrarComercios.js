@@ -1,8 +1,7 @@
 var drawer = new Drawer();
 
 window.renderComercios = function renderComercios() {
-  /*   Comercios.forEach(puntoVenta => { */
+   //Comercios.forEach(comercio => { 
         drawer.drawLocationInMap(Comercios, myMap);
-  /*   }); */
-
+  // }); 
 }

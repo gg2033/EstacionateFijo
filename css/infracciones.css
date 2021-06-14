@@ -24,17 +24,23 @@
     border-radius: 5px;
     height: auto;
     padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 45px !important;
 }
 
 .infraccion {
     border:1px solid #ccc;
-    padding: 10px;
     border-radius: 5px;
     transition-duration: 0.3s;
     background-color: #f8f8f8 !important;
     margin-bottom: 19px;
+    padding: 10px !important;
+    padding-left:10px !important;
 }
 
+.infraccion .infraccionInfo {
+    margin-bottom: 10px;
+}
 .infraccion:hover {
     box-shadow: rgba(112, 112, 112, 0.555) 0px 7px 10px;
 }
@@ -62,14 +68,43 @@
     color: rgb(134, 134, 134);
 }
 
+.mensajePatente {
+    font-size: 14px;
+}
+.mensajePatente strong {
+    font-size: 15px;
+    margin-left: 5px !important;
+}
 
+.infraccion .deposito {
+   /* display: flex;
+    margin: 0 !important;*/
+    position: relative;
+}
 
+.mapaDepositos {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100px;
+    min-height: 200px;
+    border-radius: 3px;
+   /* margin: auto;*/
+    margin-top: 0;
+}
 
+.depDir {
+    font-size: 10.5px ;
+}
 
-
-
-
-
+#contResultados {
+    font-weight: 700;
+    margin-top: 0 !important;
+   
+    color: rgba(141, 141, 141, 0.726);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px !important;
+}
 
 
 

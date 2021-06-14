@@ -14,17 +14,6 @@ function createMap(nodeId) {
             maxZoom: 25,
         }).addTo(myMap);
 
-/*     L.polygon(
-        [
-            L.latLng(-34.515594, - 58.705654),
-            L.latLng(-34.523503, -58.714062),
-            L.latLng(-34.519177, -58.719890),
-            L.latLng(-34.511089, -58.707909),
-            L.latLng(-34.514062, -58.707909),
-            L.latLng(-34.513824, -58.707584)
-        ]
-    ).addTo(myMap); */
-
     Zonas.forEach(zona => {
         L.polygon(zona.region, {color:zona.color}
         ).addTo(myMap);
@@ -32,7 +21,7 @@ function createMap(nodeId) {
  /*    let marker = L.marker(ungsLocation).addTo(myMap);  */
 
 
-    myMap.on('zoomend', function() {
+    /*myMap.on('zoomend', function() {
         console.log(myMap.getZoom());
         if (myMap.getZoom() <17){
             $('#mapid .comerciosIcon').css({'display':'none'}); 
@@ -49,9 +38,9 @@ function createMap(nodeId) {
         if (myMap.getZoom()>14){
             $('#mapid .estacionamientosIcon').css({'display':'block'}); 
         }
-        
+       */ 
       /*   var newzoom = '' + (myMap.getZoom()*2) +'px'; */
     
         
-    });
+    //});
 }

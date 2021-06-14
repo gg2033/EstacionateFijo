@@ -1,4 +1,13 @@
 const url = "https://infraccionesweb.herokuapp.com/api/";
+
+window.renderFormInfrs = function renderFormInfrs() {
+    container.innerHTML = infraccionesForm;
+    document.getElementById("btnBuscarPatente").addEventListener('click', (e)=> {
+        e.preventDefault();
+        renderInfracciones(document.getElementById('patenteSelecionada').value);
+    })
+}
+
 function infrSinAcarreo(inf) {
     let ret = 
     `<div class="infraccion">
@@ -30,32 +39,17 @@ async function infrConAcarreo(inf, call) {
             <p><strong>Direccion Registrada: </strong>${inf.direccionRegistrada}</p>
             <p><strong>Existe Acarreo: </strong>SI</p>
         </div>
-        <div class="deposito border-top mt-3 pt-2">
-            <p><strong>Deposito: </strong>${dep.nombre}</p>
-            <p><strong>Direccion: </strong>${dep.direccion}</p>
-            <p><strong>Horarios: </strong>${dep.horarios}</p>
-            <p><strong>Telefono: </strong>${dep.telefono}</p>
+        <div class="deposito border-top pt-1 mt-3 ">
+            <div class="pt-2 mb-3">
+                <p><strong>Deposito: </strong>${dep.nombre}</p>
+                <p><strong>Direccion: </strong>${dep.direccion}</p>
+                <p><strong>Horarios: </strong>${dep.horarios}</p>
+                <p><strong>Telefono: </strong>${dep.telefono}</p>
+            </div>
+            <div id="depositoMap-${inf.id}" class="mapaDepositos border"></div>
         </div>
     </div>`);
-}
-
-window.renderFormInfrs = function renderFormInfrs() {
-    container.innerHTML = `
-    <div class="containerFormInfrs m-auto d-flex align-items-center justify-content-center">
-        <form action="" class="formInfrs rounded p-4 bg-light d-flex flex-column align-items-center">
-            <div class="headerForm text-center my-5">
-                <h2>INFRACCIONES</h2>
-                <p class="text-secondary">Veamos tus infracciones</p>
-            </div> 
-            <input type="text" class="border rounded  mt-2 border" id="patenteSelecionada" placeholder="patente"/>
-            <button class="btn btn-outline-success px-4 mt-4" id="btnBuscarPatente">BUSCAR</button>
-        </form>
-    </div>`;
-
-    document.getElementById("btnBuscarPatente").addEventListener('click', (e)=> {
-        e.preventDefault();
-        renderInfracciones(document.getElementById('patenteSelecionada').value);
-    })
+    createMapDepositos(`depositoMap-${inf.id}`, dep);
 }
 
 async function renderInfracciones(patente) {
@@ -64,8 +58,8 @@ async function renderInfracciones(patente) {
     const contInfs = document.getElementById('containerInfracciones');
     contInfs.classList.remove('d-none');
     contInfs.innerText = '';
-
     let datos = (await(await fetch(`${url+patente}/infracciones`)).json()).infracciones;
+    contInfs.innerHTML = `<div id="contResultados"><span>Resultados econtrados: ${datos.length}</span><span>${patente}</span></div>`;
     datos.forEach(element => {
         if(element.existeAcarreo === true){
             infrConAcarreo(element,(data) =>{
@@ -79,7 +73,19 @@ async function renderInfracciones(patente) {
 }
 
 
+function createMapDepositos(nodeId, dep) {
+    let coordenadas = [dep.ubicacion.lat, dep.ubicacion.lon];
+    let myMap = L.map(nodeId).setView(coordenadas, 13);
 
+    // renderizamos el mapa
+    const tileprovider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    let marker = L.marker(coordenadas).addTo(myMap)
+    .bindPopup(`${dep.nombre}<br/><span class="depDir">${dep.direccion}</span>`); 
+    L.tileLayer(tileprovider,
+        {
+            maxZoom: 13,
+        }).addTo(myMap);
+}
 
 
 

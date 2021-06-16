@@ -37,6 +37,10 @@
     text-align: left;
 }
 
+.login-form input {
+    padding-left: 7px !important;
+}
+
 input[type=text] {
     background-color: #1A2226;
     border: none;
@@ -122,3 +126,4 @@ label {
 .loginbttm {
     padding: 0px;
 }
+

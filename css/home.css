@@ -4,10 +4,11 @@
 }
 
 body {
-    margin: 0 !important;
-    height: 100vh !important;
-    overflow: auto;
+    /*margin: 0 !important;
+    height: auto;
+    overflow: auto;*/
     background-color: rgb(23, 139, 172) !important;  
+    padding: 0 !important;
 }
 
 #noLogueado {
@@ -23,29 +24,24 @@ form input {
 }
 
 #container{
-    min-height: 100vh !important;
+    min-height: 100% !important;
     height: auto;
-    position: relative;
-    
-    padding-bottom: 30px;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 .homeContainer {
-    position: relative;
-    min-height: 100vh;
     height: auto;
 }
 
-
-
 #header{
     padding: 0px;
-    height: 150px;
-    margin-top: 30px !important;
+    height: 200px;
+    padding-top: 30px !important;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
+    justify-content: space-around;
+    
 }
 
 #header nav {
@@ -56,21 +52,21 @@ form input {
 #title{
     text-align: center;
     color:rgba(243, 243, 243, 0.445);
+    cursor: pointer;
 }
 
-#actionsContainer {
-    padding: 0px;
+#menu_1, #menu_2 {
     margin-bottom: 40px;
     margin-top: 10px;
+    
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-#actionsContainer H4 {
-    color: white;
-    margin: 15px 20px 15px 5px;
-}
 
-#actionsContainer .opcion {
-    margin-top: 10px;
+#menu_1 .opcion, #menu_2 *, #toBack {
     padding: 5px;
     text-align: center;
     border: 1px solid rgba(204, 204, 204, 0.171);
@@ -79,17 +75,36 @@ form input {
     color: #f8f8f8;
     max-width: 400px;
     margin-right : 10px;
-    width: 160px !important;
+    margin-top: 10px;
+    width: 150px !important;
     cursor: pointer;
 }
+
+#menu_1 .opcion:hover, #menu_2 i:hover {
+    background-color: rgba(226, 223, 223, 0.486);
+    transition-duration: 0.3s;
+}
+
+#menu_2 {
+    align-items: flex-end;
+    
+}
+
+#menu_2 *:nth-child(1) {
+    width: auto !important;
+    padding: 10px;
+    font-size: 19px !important;
+    margin-top: 0 !important;
+}
+
+#menu_2 *:nth-child(2) {
+    background-color: rgba(46, 46, 46, 0.219);
+    color:rgb(172, 172, 172)
+}
+
 #pass{
     display: flex;
     width: 90%;
-}
-
-#actionsContainer .opcion:hover {
-    background-color: rgba(226, 223, 223, 0.61);
-    transition-duration: 0.3s;
 }
 
 #nombre{
@@ -107,7 +122,6 @@ form input {
     border-radius: 5px;
 }
 
-
 #usuario {
     font-size: 18px;
     color: rgba(253, 253, 253, 0.781);
@@ -118,10 +132,33 @@ form input {
     margin-right: 10px;
 }
 
+#toBack {
+    width: 70px !important;
+    opacity: 0.5;
+    position: absolute;
+    left: 4vw;
+    top: 40px;
+    transition-duration: 0.2s;
+}
 
+#toBack:hover {
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.192) 8px 6px 5px -1.4px;
+}
 
+#logout {
+    color:rgba(53, 52, 52, 0.87);
+    font-size: 18px;
+    opacity: 0.3;
+}
 
+#logout:hover {
+    opacity: 1;
+}
 
+footer {
+    margin-top: 100px !important;
+}
 
 
 

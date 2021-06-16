@@ -1,16 +1,17 @@
 window.renderLogin = function renderLogin() {
     container.innerHTML=loginForm;
+    document.querySelector('footer').classList.add('d-none');
 }
 
 window.handlerLogin =  function handlerLogin() {
     let email = document.getElementById('emailLog').value;
     let pass = document.getElementById('passLog').value;
     usLogeado = validarUsuario(email, pass);
+
     if(usLogeado === false) {
         alert("El email o el password es INCORRECTO!!");
     } else {
         renderHome();
-        gestionarVerAutos();
     }
 }
 
@@ -42,8 +43,7 @@ function renderUbicacionAuto() {
     });
 
     L.marker(usLogeado.ubicacion, {icon: iconMarker}).addTo(myMap).bindPopup('Movil Estacionado');
-
- }
+}
 
 
 

@@ -2,9 +2,12 @@ const url = "https://infraccionesweb.herokuapp.com/api/";
 
 window.renderFormInfrs = function renderFormInfrs() {
     container.innerHTML = infraccionesForm;
+    document.querySelector('footer').classList.add('d-none');
     document.getElementById("btnBuscarPatente").addEventListener('click', (e)=> {
         e.preventDefault();
-        renderInfracciones(document.getElementById('patenteSelecionada').value);
+        if(document.getElementById('patenteSelecionada').value.replaceAll(" ","").length >0) {
+            renderInfracciones(document.getElementById('patenteSelecionada').value.replaceAll(" ",""));
+        }
     })
 }
 
@@ -54,6 +57,8 @@ async function infrConAcarreo(inf, call) {
 
 async function renderInfracciones(patente) {
     renderHome();
+    container.innerHTML = container.innerHTML + '<img src="img/loading.svg" id="loading_img" alt="">';
+    gestionarMenues();
     document.getElementById('mapid').classList.add('d-none');
     const contInfs = document.getElementById('containerInfracciones');
     contInfs.classList.remove('d-none');
@@ -70,23 +75,8 @@ async function renderInfracciones(patente) {
             contInfs.innerHTML = contInfs.innerHTML + infrSinAcarreo(element);
         }
     });
+    document.getElementById('loading_img').classList='d-none';
 }
-
-
-function createMapDepositos(nodeId, dep) {
-    let coordenadas = [dep.ubicacion.lat, dep.ubicacion.lon];
-    let myMap = L.map(nodeId).setView(coordenadas, 13);
-
-    // renderizamos el mapa
-    const tileprovider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    let marker = L.marker(coordenadas).addTo(myMap)
-    .bindPopup(`${dep.nombre}<br/><span class="depDir">${dep.direccion}</span>`); 
-    L.tileLayer(tileprovider,
-        {
-            maxZoom: 13,
-        }).addTo(myMap);
-}
-
 
 
 

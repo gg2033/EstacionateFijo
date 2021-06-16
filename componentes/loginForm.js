@@ -1,5 +1,6 @@
 const loginForm = `
 <div class="row w-100 p-0 m-0 container-login">
+    <i class="fas fa-arrow-left" id="toBack" onClick="renderHome()"></i>
     <div class="col-lg-6 col-md-8 login-box m-auto">
         <div class="col-lg-12 login-key">
             <i class="fa fa-key" aria-hidden="true"></i>

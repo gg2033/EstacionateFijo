@@ -2,47 +2,58 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Estacionamientos SW</title>
+        <title>Estacionate Fijo</title>
+        
         <!-- css -->
-        <link rel="stylesheet" href="css/client.css">
         <link rel="stylesheet" href="css/loginForm.css">
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="css/infracciones.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+       
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
         
         <!-- bootstrap -->
-        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         
         <!-- include jQuery -->
         <script src="jquery-3.1.1.min.js"></script>
-        <!-- include leaflet 
-        <link rel="stylesheet" href="./leaflet/leaflet.css" />
-        <script src="./leaflet/leaflet.js"></script>
-        -->
-        
-         <!--  leaftlet links-->
+
+        <!--  leaftlet links-->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.0/MarkerCluster.Default.min.css" />
 
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+        
+        <!-- google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+        
+        <!-- awesome -->
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
     
     </head>
-    <body >
+    <body>
         <div class="container" id="container">
-            
+
         </div>
+        <footer class="bg-dark text-muted py-4 px-sm-5">
+            <div class="info-footer">
+                <span>Esta es la implementacion del trabajo practico de la materia Ingenieria de Software 1 - UNGS <address>1/2021</address></span>
+                <span><address>Grupo 6</address></span>
+                <ul>
+                    <li>Cisneros Franco</li>
+                    <li>Gennari Gustavo</li>
+                    <li>Carrizo Juan Cruz</li>
+                </ul>
+            </div>
+        </footer>
         
         <!-- componentes -->
-        
         <script src="componentes/loginForm.js"></script>
         <script src="componentes/Home.js"></script>
         <script src="componentes/infraccionesForm.js"></script>
@@ -58,8 +69,8 @@
         <script src="javascript/funcionesInfracciones.js"></script>
         <script src="javascript/mostrarComercios.js"></script>
         <script src="javascript/mostrarEstacionamientos.js"></script>
-      
-        
+        <script src="javascript/funcionesHome.js"></script>
+
         <!-- main -->
         <script src="javascript/main.js"></script>
     </body>

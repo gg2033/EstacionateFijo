@@ -1,5 +1,6 @@
 const infraccionesForm = `
 <div class="containerFormInfrs m-auto d-flex align-items-center justify-content-center">
+    <i class="fas fa-arrow-left" id="toBack" onClick="renderHome()"></i>
     <form action="" class="formInfrs rounded p-4 bg-light d-flex flex-column align-items-center">
         <div class="headerForm text-center my-5">
             <h2>INFRACCIONES</h2>

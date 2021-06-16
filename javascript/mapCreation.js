@@ -44,3 +44,18 @@ function createMap(nodeId) {
         
     //});
 }
+
+
+function createMapDepositos(nodeId, dep) {
+    let coordenadas = [dep.ubicacion.lat, dep.ubicacion.lon];
+    let myMap = L.map(nodeId).setView(coordenadas, 13);
+
+    // renderizamos el mapa
+    const tileprovider = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    let marker = L.marker(coordenadas).addTo(myMap)
+    .bindPopup(`${dep.nombre}<br/><span class="depDir">${dep.direccion}</span>`); 
+    L.tileLayer(tileprovider,
+        {
+            maxZoom: 13,
+        }).addTo(myMap);
+}

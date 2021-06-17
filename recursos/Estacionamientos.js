@@ -19,13 +19,13 @@ const Estacionamientos = [
     },
     {
         zonaId: 2,
-        codigo:1, estado:'DISPONIBLE', 
+        codigo:4, estado:'DISPONIBLE', 
         ubicacion:[-34.519395, -58.715103],
         icon : 'img/icon_estacionamiento_libre.png'
     },
     {
         zonaId: 2,
-        codigo:2, estado:'DISPONIBLE', 
+        codigo:5, estado:'DISPONIBLE', 
         ubicacion:[-34.515990, -58.712763],
         icon : 'img/icon_estacionamiento_libre.png'
     },

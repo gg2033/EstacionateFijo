@@ -5,7 +5,7 @@ var Drawer = function() {
     }
 
     function draweEstacionamientoInMap(estacionamiento, map){
-        if($('.estacionamientosIcon').length<1){
+       
             //console.log("Dibujando estacionamiento");        
             var info = "Codigo Estacionamiento: "+estacionamiento.codigo + " - " + "Estado: "+estacionamiento.estado; 
             var p = L.marker(L.latLng(estacionamiento.ubicacion))
@@ -13,9 +13,7 @@ var Drawer = function() {
     
             p.addTo(map);	
             $(p._icon).addClass('estacionamientosIcon');
-        }else{
-            console.log("ya estan dibujadas");
-        }     
+        
      }
 
     /******************************************************************************

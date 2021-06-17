@@ -33,7 +33,7 @@ var Drawer = function() {
         var markers = L.markerClusterGroup();
         var arrayMarcadoresComercios=[];
         Comercios.forEach(comercio => {
-            var iconComercio = L.icon({
+            /*var iconComercio = L.icon({
                 iconUrl: comercio.icon,
                 color: 'red',
                 iconSize:     [38, 46], // size of the icon
@@ -41,7 +41,7 @@ var Drawer = function() {
                 iconAnchor:   [38, 46], // point of the icon which will correspond to marker's location
                 shadowAnchor: [4, 62],  // the same for the shadow
                 popupAnchor:  [-3, -30] // point from which the popup should open relative to the iconAnchor
-            });
+            });*/
             var redMarker = L.AwesomeMarkers.icon({
                 icon: 'fa-store',
                 markerColor: 'green',
@@ -57,4 +57,16 @@ var Drawer = function() {
         /*   markers.addLayer(marker); */
         map.addLayer(markers);
 	}
+}
+
+
+function renderUbicacionAuto() {
+    var iconMarker = L.AwesomeMarkers.icon({
+        icon: 'fa-car',
+        markerColor: 'black',
+        shape: 'square',
+        prefix: 'fa'
+    });
+
+    L.marker(usLogeado.ubicacion, {icon: iconMarker}).addTo(myMap).bindPopup('Movil Estacionado');
 }

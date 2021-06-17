@@ -34,16 +34,6 @@ function gestionarVerAutos() {
     }
 }
 
-function renderUbicacionAuto() {
-    var iconMarker = L.AwesomeMarkers.icon({
-        icon: 'fa-car',
-        markerColor: 'black',
-        shape: 'square',
-        prefix: 'fa'
-    });
-
-    L.marker(usLogeado.ubicacion, {icon: iconMarker}).addTo(myMap).bindPopup('Movil Estacionado');
-}
 
 
 

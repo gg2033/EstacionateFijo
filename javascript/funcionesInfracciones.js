@@ -11,8 +11,9 @@ window.renderFormInfrs = function renderFormInfrs() {
     })
 }
 
-function infrSinAcarreo(inf) {
-    let ret = 
+async function infrSinAcarreo(inf, call) {
+    let motivoInfr = await getMotivoInfraccion(inf.tipoInfraccion);
+    call( 
     `<div class="infraccion">
         <div class="infraccionInfo">
             <p><strong>Infraccion: </strong>${inf.id}</p>
@@ -20,16 +21,16 @@ function infrSinAcarreo(inf) {
             <p><strong>Registracion: </strong>${inf.fechaHoraRegistro}</p>
             <p><strong>Actualizacion: </strong>${inf.fechaHoraActualizacion}</p>
             <p><strong>monto a pagar:</strong>${inf.montoAPagar}</p>
-            <p><strong>Tipo infraccion: </strong>${inf.tipoInfraccion}</p>
+            <p><strong>Razon : </strong>${motivoInfr}</p>
             <p><strong>Direccion Registrada: </strong>${inf.direccionRegistrada}</p>
             <p><strong>Existe Acarreo: </strong>NO</p>
         </div>
-    </div>`;
-    return ret;
+    </div>`);
 }
 
 async function infrConAcarreo(inf, call) {
     let dep = (await(await fetch(`${url+inf.patente}/acarreos/${inf.id}`)).json()).acarreo.deposito;
+    let motivoInfr = await getMotivoInfraccion(inf.tipoInfraccion);
    call(
     `<div class="infraccion">
         <div class="infraccionInfo">
@@ -38,7 +39,7 @@ async function infrConAcarreo(inf, call) {
             <p><strong>Registracion: </strong>${inf.fechaHoraRegistro}</p>
             <p><strong>Actualizacion: </strong>${inf.fechaHoraActualizacion}</p>
             <p><strong>monto a pagar:</strong>${inf.montoAPagar}</p>
-            <p><strong>Tipo infraccion: </strong>${inf.tipoInfraccion}</p>
+            <p><strong>Razon : </strong>${motivoInfr}</p>
             <p><strong>Direccion Registrada: </strong>${inf.direccionRegistrada}</p>
             <p><strong>Existe Acarreo: </strong>SI</p>
         </div>
@@ -72,7 +73,9 @@ async function renderInfracciones(patente) {
             });
         }
         else {
-            contInfs.innerHTML = contInfs.innerHTML + infrSinAcarreo(element);
+            infrSinAcarreo(element, data => {
+                contInfs.innerHTML = contInfs.innerHTML + data;
+            })
         }
     });
     document.getElementById('loading_img').classList='d-none';
@@ -80,7 +83,10 @@ async function renderInfracciones(patente) {
 
 
 
-
+async function getMotivoInfraccion(id) {
+    let datos = (await(await fetch(`${url}/tiposInfraccion/${id}`)).json()).tipo.descripcion;
+    return datos;
+}
 
 
 

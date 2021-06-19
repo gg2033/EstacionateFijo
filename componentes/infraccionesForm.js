@@ -6,7 +6,7 @@ const infraccionesForm = `
             <h2>INFRACCIONES</h2>
             <p class="text-secondary">Veamos tus infracciones</p>
         </div> 
-        <input type="text" class="border rounded  mt-2 border" id="patenteSelecionada" placeholder="patente"/>
+        <input type="text" class="border rounded  mt-2 border" id="patenteSelecionada" placeholder="ej:ABC123"/>
         <button class="btn btn-outline-success px-4 mt-4" id="btnBuscarPatente">BUSCAR</button>
     </form>
 </div>`;
